@@ -1,0 +1,30 @@
+# Ignore checkpoints, training logs, and datasets
+ckpt/
+data_48k/
+*.csv
+*.wav
+
+# Ignore temporary and large model exports
+*.onnx
+*.ts
+*.pt
+*.pth
+
+# Except: keep the main trained model + config
+!ckpt/sax/sax_48k.pth
+!ckpt/sax/sax_48k.ts
+!configs/sax_48k.yaml
+
+# Python cache and editor files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+Thumbs.db

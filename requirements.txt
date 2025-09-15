@@ -1,0 +1,21 @@
+# Core ML/DSP Frameworks
+torch==2.3.0
+torchaudio==2.3.0
+torchvision==0.18.0
+
+# Audio & DSP
+librosa==0.11.0
+soundfile==0.13.1
+scipy==1.13.1
+numpy==1.23.5
+
+# Config & Utilities
+omegaconf==2.3.0
+tqdm==4.67.1
+matplotlib==3.9.4
+
+# Pitch extraction (choose one)
+crepe==0.0.12          # original TensorFlow-based
+torchcrepe==0.0.24     # PyTorch alternative
+
+

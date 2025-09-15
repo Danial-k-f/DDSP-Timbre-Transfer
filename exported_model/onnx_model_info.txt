@@ -1,0 +1,16 @@
+
+=== Inputs ===
+ - f0 [1, 'frame_len']
+ - loudness [1, 'frame_len']
+
+=== Outputs ===
+ - harmonic ['Mulharmonic_dim_0', 'audio_len']
+ - noise ['Mulharmonic_dim_0', 'audio_len']
+ - audio_synth ['Mulharmonic_dim_0', 'audio_len']
+ - audio_reverb ['Mulharmonic_dim_0', 'audio_len']
+ - a [1, 'Slicea_dim_1']
+ - c [1, 101, 'Slicec_dim_2']
+ - H [1, 'SliceH_dim_1', 65]
+ - f0_out [1, 'Squeezef0_out_dim_1']
+ - loudness_out [1, 'Sliceloudness_out_dim_1']
+ - z ['ConstantOfShapez_dim_0', 'ConstantOfShapez_dim_1', 'ConstantOfShapez_dim_2']
