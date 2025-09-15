@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="Timbre_transfer_logo.png" alt="DDSP Timbre Transfer Logo" width="300"/>
+</p>
+
+# DDSP-Timbre-Transfer
+
+
 # DDSP-Timbre-Transfer (48kHz)
 
 This repository contains a **Differentiable Digital Signal Processing (DDSP)** model trained for **timbre transformation** at **48kHz**.  
