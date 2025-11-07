@@ -20,5 +20,5 @@ jobs:
         env:
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
         run: |
-          cog login --token "$REPLICATE_API_TOKEN"
+          echo "$REPLICATE_API_TOKEN" | cog login --token-stdin
           cog push r8.im/danial-k-f/saxmorpher
