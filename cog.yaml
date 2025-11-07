@@ -21,6 +21,3 @@ predict: "predict.py"
 
 image: "r8.im/danial-k-f/saxmorpher"
 
-
-description: |
-  DDSP SaxMorpher – transforms input audio to saxophone timbre using a neural autoencoder model.
