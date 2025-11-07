@@ -9,8 +9,8 @@ build:
     - torchvision==0.18.0
     - librosa==0.11.0
     - soundfile==0.13.1
-    - scipy==1.11.4
-    - hmmlearn==0.2.8
+    - scipy==1.13.1
+    - hmmlearn==0.2.7
     - numpy==1.23.5
     - omegaconf==2.3.0
     - tqdm==4.67.1
