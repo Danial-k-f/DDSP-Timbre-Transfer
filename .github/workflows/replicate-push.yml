@@ -8,28 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.10"
-
-      - name: Install Cog CLI
-        run: |
-          python -m pip install --upgrade pip
-          pip install cog==0.16.8
-          echo "Cog installed to: $(python -m site --user-base)/bin"
-          export PATH="$(python -m site --user-base)/bin:$PATH"
-          echo "PATH after install: $PATH"
-          ~/.local/bin/cog --version || $(python -m site --user-base)/bin/cog --version || true
-
-      - name: Login and Push to Replicate
+      - name: Login to Replicate and Push model
         env:
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
         run: |
-          export PATH="$(python -m site --user-base)/bin:$PATH"
-          echo "Cog path: $(which cog)"
-          $(python -m site --user-base)/bin/cog login --token "$REPLICATE_API_TOKEN"
-          $(python -m site --user-base)/bin/cog push r8.im/danial-k-f/saxmorpher
+          docker run --rm \
+            -v "$(pwd)":/src \
+            -e REPLICATE_API_TOKEN="$REPLICATE_API_TOKEN" \
+            replicate/cog:v0.8.6 \
+            push r8.im/danial-k-f/saxmorpher
