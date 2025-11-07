@@ -20,16 +20,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install cog==0.16.8
-          # تست مسیر نصب
-          python -m cog --version || true
-          echo "PATH after install:"
-          echo $PATH
-          which python
+          python -m cog --version
 
       - name: Login and Push to Replicate
         env:
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
         run: |
-          
-          python -m cog.cli login --token "$REPLICATE_API_TOKEN"
-          python -m cog.cli push r8.im/danial-k-f/saxmorpher
+          # Login to Replicate
+          python -m cog login --token "$REPLICATE_API_TOKEN"
+
+          # Push model
+          python -m cog push r8.im/danial-k-f/saxmorpher
