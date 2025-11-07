@@ -16,7 +16,7 @@ build:
     - matplotlib==3.9.4
     - crepe==0.0.12
 
-predict: "predict.py"
+predict: "predict.py:Predictor"
 
 
 image: "r8.im/danial-k-f/saxmorpher"
