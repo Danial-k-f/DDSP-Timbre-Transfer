@@ -1,0 +1,5 @@
+- name: Install Cog CLI (dev build)
+  run: |
+    curl -L -o /usr/local/bin/cog https://github.com/replicate/cog/releases/download/v0.9.0-beta.1/cog_Linux_x86_64
+    chmod +x /usr/local/bin/cog
+    cog --version
